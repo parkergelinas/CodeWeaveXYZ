@@ -1,9 +1,29 @@
 import Link from "next/link";
+import { useEffect, useState } from "react";
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      if (offset > 10) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <header className="bg-transparent py-4 shadow-md ">
-      <div className="container mx-auto flex justify-between items-center px-4 md:px-8">
+    <header className="bg-transparent px-8 py-4 shadow-lg w-full z-10">
+      <div className="container mx-auto flex justify-between items-center">
         <div className="text-xl font-bold text-gray-800">
           {/* Link back to home or top of the page */}
           <Link

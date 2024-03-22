@@ -6,13 +6,13 @@ interface PricingCardProps {
   title: string;
   price: string;
   currency: string;
-  originalPrice?: string;
+  originalPrice?: string; // originalPrice is optional
   features: string[];
   stripeUrl: string;
   isPopular: boolean;
 }
 
-const PricingCard = ({
+const PricingCard: React.FC<PricingCardProps> = ({
   title,
   price,
   currency,
@@ -32,18 +32,20 @@ const PricingCard = ({
           POPULAR CHOICE
         </span>
       )}
-      <h3 className="text-xl font-semibold mb-4  text-dark-gray">
+      <h3 className="text-xl font-semibold mb-4 text-dark-gray">
         {title} Plan
       </h3>
-      <div className="text-4xl font-bold mb-4">
-        <span className=" text-dark-gray">
+      <div className="text-4xl font-bold mb-4 text-dark-gray">
+        <span>
           {currency}${price}
         </span>
-        <span className="text-sm text-gray-500 line-through ml-2">
-          {currency}${originalPrice}
-        </span>
+        {originalPrice && (
+          <span className="text-sm text-gray-500 line-through ml-2">
+            {currency}${originalPrice}
+          </span>
+        )}
       </div>
-      <ul className="mb-6  text-dark-gray">
+      <ul className="mb-6 text-dark-gray">
         {features.map((feature, index) => (
           <li key={index} className="flex items-center mb-2">
             <span className="text-green-500 mr-2">✔</span>
@@ -55,14 +57,12 @@ const PricingCard = ({
         href={stripeUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="block"
+        className="block bg-green-500 text-white text-center w-full py-3 rounded-md font-bold my-4 hover:bg-green-600 transition-all duration-300"
       >
-        <button className="w-full bg-green-500 text-white py-3 rounded-md font-bold my-4 hover:bg-green-600 transition-all duration-300">
-          Get {title}
-        </button>
+        Get {title}
       </a>
       <p className="text-gray-600 text-xs">
-        One-time payment, it&apos;s yours forever
+        One-time payment, it's yours forever
       </p>
     </div>
   );

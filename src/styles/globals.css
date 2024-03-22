@@ -1,0 +1,241 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;700&display=swap");
+
+:root {
+  --color-primary: #4a56e2; /* Primary brand color */
+  --color-secondary: #10b981; /* Secondary color */
+  --color-tertiary: #ffed4a; /* Accent color */
+  --color-danger: #e3342f; /* Error or warning color */
+}
+
+.code-display,
+.testimonial-text,
+.button-text {
+  font-family: "Fira Code", monospace;
+}
+
+html,
+body {
+  font-family: "Fira Code", sans-serif;
+}
+
+body {
+  font-family: "Roboto Mono", monospace;
+}
+
+/* Define animation for fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideDown {
+  from {
+    transform: scaleY(0);
+  }
+  to {
+    transform: scaleY(1);
+  }
+}
+
+.faq-enter {
+  animation: fadeIn 0.5s ease-out, slideDown 0.5s ease-out;
+  transform-origin: top;
+  display: block;
+  opacity: 0;
+  will-change: transform, opacity;
+}
+
+.faq-leave {
+  animation: fadeIn 0.5s ease-out reverse, slideDown 0.5s ease-out reverse;
+  animation-fill-mode: forwards;
+  transform-origin: top;
+  will-change: transform, opacity;
+}
+
+.fade-in {
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.faq-transition {
+  transition: height 0.3s ease-in-out;
+}
+
+/* Define animation for scaling-up effect */
+@keyframes scaleUp {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.05);
+  }
+}
+
+.scale-up {
+  animation: scaleUp 0.5s ease forwards;
+}
+
+/* Tailwind utility classes for flexbox centering */
+.flex-center {
+  @apply flex justify-center items-center;
+}
+
+/* Custom section styling */
+.section {
+  @apply py-16 min-h-screen flex flex-col justify-center;
+}
+
+/* Card styling */
+.card {
+  @apply bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow;
+}
+
+/* Background gradient for Main Section */
+.bg-main-gradient {
+  /* Replace with your desired gradient colors */
+  background: linear-gradient(
+    135deg,
+    rgba(67, 198, 172, 1) 0%,
+    rgba(25, 22, 84, 1) 100%
+  );
+}
+
+/* Background color for Pricing and Feature Comparison sections */
+.bg-section {
+  background-color: #ffffff; /* This is white, adjust if you have a different section background color */
+}
+
+/* Card Styling for Pricing and Testimonial sections */
+.card {
+  background-color: #ffffff;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
+    0 4px 6px -2px rgba(0, 0, 0, 0.05);
+  padding: 2rem;
+}
+
+.transition-transform:hover {
+  transform: translateY(-5px);
+}
+
+/* Button Styling */
+.btn-primary {
+  background-color: var(--color-secondary);
+  color: #ffffff;
+  padding: 0.75rem 2rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-tertiary);
+}
+
+/* Tailwind Utility Overrides */
+.container {
+  @apply mx-auto px-6;
+}
+
+.text-gray-200 {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.text-primary {
+  color: var(--color-primary);
+}
+
+.text-danger {
+  color: var(--color-danger);
+}
+
+/* ... Additional custom styles ... */
+.section-height {
+  min-height: 100vh; /* This will make sure each section takes at least the full height of the viewport */
+}
+
+.full-height {
+  @apply min-h-screen;
+}
+
+@media (max-width: 640px) {
+  .section-height {
+    min-height: auto;
+  }
+}
+
+/* Responsive Text Sizing */
+.text-dynamic {
+  @apply text-base md:text-lg lg:text-xl;
+}
+
+/* Smooth scaling for hover states */
+.transition-scale-hover:hover {
+  transform: scale(1.05);
+  transition: transform 0.3s ease;
+}
+
+/* Fade and slide-in animation for when components enter the viewport */
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-slide-up {
+  animation: fadeInSlideUp 0.7s ease-out forwards;
+  visibility: hidden; /* Keep the element hidden until the animation starts */
+  animation-delay: 0.3s; /* Delay the start of the animation */
+  animation-fill-mode: both; /* Make sure the final state of the animation persists */
+}
+
+/* Responsive grid layout for the comparison cards */
+@media (min-width: 768px) {
+  .comparison-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+/* Card Styling for different states */
+.card {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.1),
+    0 8px 16px -8px rgba(0, 0, 0, 0.1);
+  transform: translateY(
+    -4px
+  ); /* Lift the card slightly to give a 'raised' effect */
+}
+
+/* Add a little rotation for the ❌ and ✔ icons to give them some personality */
+.icon-rotate {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.icon-rotate:hover {
+  transform: rotate(-10deg);
+}
+
+/* Responsive utility for text alignment */
+.text-align-responsive {
+  text-align: left;
+  @apply md:text-center;
+}

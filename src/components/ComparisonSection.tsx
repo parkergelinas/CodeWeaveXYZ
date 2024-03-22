@@ -10,7 +10,9 @@ const ComparisonSection = () => {
         <div className="flex flex-col md:flex-row justify-center items-start md:items-center gap-10">
           {/* Drawbacks of manual coding */}
           <div className="bg-red-100 rounded-lg p-6 w-full md:w-1/2">
-            <h3 className="font-bold text-xl mb-4">Coding without CodeWeave</h3>
+            <h3 className="font-bold text-xl mb-4 text-red-500 ">
+              Coding without CodeWeave
+            </h3>
             <ul className="text-left mb-6">
               <li className="text-red-500 my-2">
                 ❌ Repetitive boilerplate code
@@ -25,7 +27,9 @@ const ComparisonSection = () => {
 
           {/* Benefits of using CodeWeave */}
           <div className="bg-green-100 rounded-lg p-6 w-full md:w-1/2">
-            <h3 className="font-bold text-xl mb-4">Coding with CodeWeave</h3>
+            <h3 className="font-bold text-xl mb-4 text-green-500">
+              Coding with CodeWeave
+            </h3>
             <ul className="text-left mb-6">
               <li className="text-green-500 my-2">
                 ✔ AI-powered code generation
@@ -42,7 +46,7 @@ const ComparisonSection = () => {
         </div>
         {/* Testimonial section */}
         <div className="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-lg mt-5">
-          <blockquote className="text-lg italic text-gray-600">
+          <blockquote className="text-lg italic text-gray-600 mt-10">
             <p className="mb-4">
               "Incorporating CodeWeave into my workflow has been a game-changer.
               The amount of time saved by not having to manually write or debug

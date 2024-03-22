@@ -80,6 +80,10 @@ body {
   }
 }
 
+.text-dark-gray {
+  color: #2f303a;
+}
+
 .scale-up {
   animation: scaleUp 0.5s ease forwards;
 }
@@ -151,7 +155,7 @@ body {
 }
 
 .text-primary {
-  color: var(--color-primary);
+  color: #2f303c;
 }
 
 .text-danger {

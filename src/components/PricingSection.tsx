@@ -38,7 +38,7 @@ const PricingSection = () => {
     <div id="pricing">
       <section className="bg-white py-12 mb-10">
         <div className="container mx-auto px-6 text-center">
-          <h2 className="text-3xl font-bold mb-10">
+          <h2 className="text-3xl font-bold mb-10 text-dark-gray">
             Streamline Your Code with CodeWeave
           </h2>
           <div className="grid md:grid-cols-2 gap-8 items-stretch">

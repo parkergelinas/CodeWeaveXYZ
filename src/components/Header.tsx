@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Header = () => {
   return (
-    <header className="bg-transparent py-4 shadow-md">
+    <header className="bg-transparent py-4 shadow-md ">
       <div className="container mx-auto flex justify-between items-center px-4 md:px-8">
         <div className="text-xl font-bold text-gray-800">
           {/* Link back to home or top of the page */}
@@ -42,7 +42,7 @@ const Header = () => {
         <div>
           <Link
             href="#login" // You might want this to be a real link or a method that opens a login modal
-            className="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded-full transition duration-300 ease-in-out"
+            className="text-white bg-blue-500 hover:bg-blue-600 px-4 py-2 rounded shadow-lg transition duration-300 ease-in-out"
           >
             Login
           </Link>

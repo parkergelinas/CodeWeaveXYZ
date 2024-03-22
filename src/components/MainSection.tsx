@@ -21,7 +21,7 @@ const MainSection = () => {
           <li>✔ Enhance code quality and consistency</li>
         </ul>
         <button
-          className="bg-green-500 text-white px-8 py-3 rounded-full font-bold shadow-lg hover:bg-green-600 transition duration-300 ease-in-out"
+          className="bg-green-500 text-white px-8 py-3 rounded font-bold shadow-lg hover:bg-green-600 transition duration-300 ease-in-out"
           onClick={() => (window.location.href = stripeCheckoutUrl)}
         >
           Try CodeWeave Now

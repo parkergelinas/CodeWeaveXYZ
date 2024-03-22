@@ -37,10 +37,10 @@ const FaqSection = () => {
   return (
     <div id="faq">
       <div className="container mx-auto p-5 m-15">
-        <h2 className="text-3xl font-bold text-center text-code-blue mb-8">
+        <h2 className="text-3xl font-bold text-center text-code-blue mb-8 text-dark-gray">
           Frequently Asked Questions
         </h2>
-        <div className="faq-grid">
+        <div className="faq-grid  text-dark-gray">
           {faqs.map((faq, index) => (
             <div
               key={index}

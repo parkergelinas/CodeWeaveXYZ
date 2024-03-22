@@ -24,7 +24,7 @@ const TestimonialsSection = () => {
   return (
     <div className="bg-gray-50 py-12">
       <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold mb-12 text-center">
+        <h2 className="text-3xl font-bold mb-12 text-center text-dark-gray">
           Hear From Our Users
         </h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
@@ -42,7 +42,9 @@ const TestimonialsSection = () => {
                   {/* Add an img tag here if you have user images */}
                 </div>
                 <div>
-                  <p className="text-lg font-semibold">{testimonial.name}</p>
+                  <p className="text-lg font-semibold  text-dark-gray">
+                    {testimonial.name}
+                  </p>
                   <p className="text-sm text-gray-500">
                     {testimonial.position}
                   </p>

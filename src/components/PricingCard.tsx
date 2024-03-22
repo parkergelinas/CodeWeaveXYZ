@@ -1,5 +1,17 @@
 // components/PricingCard.tsx
 
+import React from "react";
+
+interface PricingCardProps {
+  title: string;
+  price: string;
+  currency: string;
+  originalPrice?: string;
+  features: string[];
+  stripeUrl: string;
+  isPopular: boolean;
+}
+
 const PricingCard = ({
   title,
   price,

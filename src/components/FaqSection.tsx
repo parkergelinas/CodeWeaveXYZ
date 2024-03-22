@@ -22,7 +22,7 @@ const FaqSection = () => {
     {
       question: "How is CodeWeave different from other snippet tools?",
       answer:
-        "CodeWeave leverages cutting-edge AI to generate code snippets that are not only syntactically correct but also contextually aware of your coding style and project structure.",
+        "CodeWeave leverages cutting-edge AI to generate code snippets that are syntactically correct.",
     },
     {
       question:

@@ -1,5 +1,5 @@
 // pages/index.tsx
-
+import { Analytics } from "@vercel/analytics/react";
 import Header from "../components/Header";
 import MainSection from "../components/MainSection";
 import PricingCard from "../components/PricingCard";
@@ -20,6 +20,7 @@ export default function Home() {
       <FaqSection />
       <TestimonialsSection />
       <Footer />
+      <Analytics />
     </div>
   );
 }

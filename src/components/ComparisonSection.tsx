@@ -48,10 +48,10 @@ const ComparisonSection = () => {
         <div className="max-w-3xl mx-auto p-6 bg-white rounded-lg shadow-lg mt-5">
           <blockquote className="text-lg italic text-gray-600 mt-10">
             <p className="mb-4">
-              "Incorporating CodeWeave into my workflow has been a game-changer.
-              The amount of time saved by not having to manually write or debug
-              boilerplate code is phenomenal. Highly recommended for any
-              developer looking to boost productivity!"
+              &quot;Incorporating CodeWeave into my workflow has been a
+              game-changer. The amount of time saved by not having to manually
+              write or debug boilerplate code is phenomenal. Highly recommended
+              for any developer looking to boost productivity!&quot;
             </p>
             <div className="flex items-center mt-4">
               <div className="flex-none w-12 h-12 rounded-full bg-gray-300"></div>{" "}

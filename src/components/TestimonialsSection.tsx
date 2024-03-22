@@ -34,7 +34,7 @@ const TestimonialsSection = () => {
               className="bg-white p-6 rounded-lg shadow-lg transition-transform transform hover:scale-105"
             >
               <blockquote className="text-gray-600 italic mb-4">
-                "{testimonial.testimonial}"
+                &quot;{testimonial.testimonial}&quot;
               </blockquote>
               <div className="flex items-center justify-center mt-4">
                 {/* Placeholder for an avatar; replace with actual images as needed */}

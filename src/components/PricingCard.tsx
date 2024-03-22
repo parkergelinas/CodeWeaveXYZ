@@ -50,7 +50,7 @@ const PricingCard = ({
         </button>
       </a>
       <p className="text-gray-600 text-xs">
-        One-time payment, it's yours forever
+        One-time payment, it&apos;s yours forever
       </p>
     </div>
   );

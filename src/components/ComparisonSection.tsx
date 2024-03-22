@@ -7,9 +7,9 @@ const ComparisonSection = () => {
         <h2 className="text-3xl font-bold mb-12 text-center fade-in-slide-up">
           Tired of the Tedium of Coding Snippets?
         </h2>
-        <div className="flex flex-col md:flex-row justify-center items-start md:items-center gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           {/* Drawbacks of manual coding */}
-          <div className="bg-red-100 rounded-lg p-6 w-full md:w-1/2">
+          <div className="bg-red-100 rounded-lg p-6">
             <h3 className="font-bold text-xl mb-4 text-red-500 ">
               Coding without CodeWeave
             </h3>
@@ -21,12 +21,12 @@ const ComparisonSection = () => {
               <li className="text-red-500 my-2">
                 ❌ Inconsistent coding patterns
               </li>
-              {/* ... more drawbacks */}
+              {/* Additional drawbacks */}
             </ul>
           </div>
 
           {/* Benefits of using CodeWeave */}
-          <div className="bg-green-100 rounded-lg p-6 w-full md:w-1/2">
+          <div className="bg-green-100 rounded-lg p-6">
             <h3 className="font-bold text-xl mb-4 text-green-500">
               Coding with CodeWeave
             </h3>
@@ -40,7 +40,7 @@ const ComparisonSection = () => {
               <li className="text-green-500 my-2">
                 ✔ Consistent and scalable codebase
               </li>
-              {/* ... more benefits */}
+              {/* Additional benefits */}
             </ul>
           </div>
         </div>
@@ -54,8 +54,11 @@ const ComparisonSection = () => {
               for any developer looking to boost productivity!&quot;
             </p>
             <div className="flex items-center mt-4">
-              <div className="flex-none w-12 h-12 rounded-full bg-gray-300"></div>{" "}
-              {/* Placeholder for an avatar image */}
+              <img
+                src="/Screenshot_45.jpg"
+                alt="Avatar of Alex Johnson"
+                className="flex-none w-12 h-12 rounded-full mr-3"
+              />
               <div className="ml-4">
                 <p className="text-sm font-semibold">Alex Johnson</p>
                 <p className="text-xs text-gray-500">Full Stack Developer</p>

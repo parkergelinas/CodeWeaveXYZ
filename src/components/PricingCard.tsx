@@ -1,4 +1,5 @@
 // components/PricingCard.tsx
+import Link from "next/link";
 
 const PricingCard = ({
   title,

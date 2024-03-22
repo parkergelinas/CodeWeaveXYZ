@@ -6,15 +6,15 @@ const PricingSection = () => {
     {
       id: "starter",
       title: "Starter",
-      price: "49",
+      price: "39",
       currency: "USD",
-      originalPrice: "99",
+      originalPrice: "89",
       features: [
         "Access to standard code snippets",
         "20 AI-powered snippets per month",
         "Community support",
       ],
-      stripeUrl: "https://buy.stripe.com/4gw16X8kffncfgAcMM",
+      stripeUrl: "https://buy.stripe.com/aEU9Dt1VR1wm1pK8wy",
       isPopular: false,
     },
     {

@@ -17,8 +17,7 @@ const FaqSection = () => {
     },
     {
       question: "Does it work for one-time purchases?",
-      answer:
-        "Yes, CodeWeave can be used for one-time purchase or subscription-based models depending on your needs.",
+      answer: "Yes, CodeWeave is a one-time purchase.",
     },
     {
       question: "How is CodeWeave different from other snippet tools?",
@@ -29,22 +28,7 @@ const FaqSection = () => {
       question:
         "Is there a limit to the number of snippets CodeWeave can generate?",
       answer:
-        "Our Professional and Enterprise plans offer a generous quota that should satisfy most development needs, with options to extend if necessary.",
-    },
-    {
-      question: "Can I integrate CodeWeave into my existing workflow?",
-      answer:
-        "Yes, CodeWeave offers seamless integration options for most popular IDEs and development environments.",
-    },
-    {
-      question: "How secure is CodeWeave?",
-      answer:
-        "Security is our top priority. CodeWeave uses end-to-end encryption to keep your data safe.",
-    },
-    {
-      question: "Can I use CodeWeave with my team?",
-      answer:
-        "Yes, CodeWeave supports team collaboration with shared snippet libraries and team management features.",
+        "Our Professional and Starter plans offer a generous quota that should satisfy most development needs.",
     },
 
     // ... other FAQ items

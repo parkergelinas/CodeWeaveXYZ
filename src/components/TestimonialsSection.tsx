@@ -5,7 +5,7 @@ const TestimonialsSection = () => {
   const testimonials = [
     {
       id: 1,
-      name: "Jane Doe",
+      name: "Jake Wilson",
       position: "Software Engineer",
       company: "TechCorp",
       testimonial:
@@ -13,7 +13,7 @@ const TestimonialsSection = () => {
     },
     {
       id: 2,
-      name: "John Smith",
+      name: "Cade Irving",
       position: "Lead Developer",
       company: "Innovatech",
       testimonial:
@@ -44,7 +44,7 @@ const TestimonialsSection = () => {
                 <div>
                   <p className="text-lg font-semibold">{testimonial.name}</p>
                   <p className="text-sm text-gray-500">
-                    {testimonial.position} at {testimonial.company}
+                    {testimonial.position}
                   </p>
                 </div>
               </div>

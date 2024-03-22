@@ -21,6 +21,7 @@
 html,
 body {
   font-family: "Fira Code", sans-serif;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -159,7 +160,7 @@ body {
 
 /* ... Additional custom styles ... */
 .section-height {
-  min-height: 100vh; /* This will make sure each section takes at least the full height of the viewport */
+  min-height: 50vh; /* This will make sure each section takes at least the full height of the viewport */
 }
 
 .full-height {

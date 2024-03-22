@@ -51,36 +51,38 @@ const FaqSection = () => {
   ];
 
   return (
-    <div className="container mx-auto p-5 m-10">
-      <h2 className="text-3xl font-bold text-center text-code-blue mb-8">
-        Frequently Asked Questions
-      </h2>
-      <div className="faq-grid">
-        {faqs.map((faq, index) => (
-          <div
-            key={index}
-            className={`bg-white p-6 rounded-lg shadow-md mb-4 ${
-              activeIndex === index
-                ? "faq-expand faq-enter-active"
-                : "faq-expand faq-leave-active"
-            }`}
-            onClick={() => toggleFAQ(index)}
-          >
-            <dt className="text-lg font-semibold text-code-indigo cursor-pointer">
-              {faq.question}
-              <span className="float-right text-code-red">
-                {activeIndex === index ? "-" : "+"}
-              </span>
-            </dt>
-            <dd
-              className={`pt-4 text-gray-600 ${
-                activeIndex === index ? "block" : "hidden"
+    <div id="faq">
+      <div className="container mx-auto p-5 m-15">
+        <h2 className="text-3xl font-bold text-center text-code-blue mb-8">
+          Frequently Asked Questions
+        </h2>
+        <div className="faq-grid">
+          {faqs.map((faq, index) => (
+            <div
+              key={index}
+              className={`bg-white p-6 rounded-lg shadow-md mb-4 ${
+                activeIndex === index
+                  ? "faq-expand faq-enter-active"
+                  : "faq-expand faq-leave-active"
               }`}
+              onClick={() => toggleFAQ(index)}
             >
-              {faq.answer}
-            </dd>
-          </div>
-        ))}
+              <dt className="text-lg font-semibold text-code-indigo cursor-pointer">
+                {faq.question}
+                <span className="float-right text-code-red">
+                  {activeIndex === index ? "-" : "+"}
+                </span>
+              </dt>
+              <dd
+                className={`pt-4 text-gray-600 ${
+                  activeIndex === index ? "block" : "hidden"
+                }`}
+              >
+                {faq.answer}
+              </dd>
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

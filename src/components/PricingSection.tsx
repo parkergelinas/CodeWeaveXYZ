@@ -35,27 +35,29 @@ const PricingSection = () => {
   ];
 
   return (
-    <section className="bg-white py-12 mb-10">
-      <div className="container mx-auto px-6 text-center">
-        <h2 className="text-3xl font-bold mb-10">
-          Streamline Your Code with CodeWeave
-        </h2>
-        <div className="grid md:grid-cols-2 gap-8 items-stretch">
-          {pricingPlans.map((plan) => (
-            <PricingCard
-              key={plan.id}
-              title={plan.title}
-              price={plan.price}
-              currency={plan.currency}
-              originalPrice={plan.originalPrice}
-              features={plan.features}
-              stripeUrl={plan.stripeUrl}
-              isPopular={plan.isPopular}
-            />
-          ))}
+    <div id="pricing">
+      <section className="bg-white py-12 mb-10">
+        <div className="container mx-auto px-6 text-center">
+          <h2 className="text-3xl font-bold mb-10">
+            Streamline Your Code with CodeWeave
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8 items-stretch">
+            {pricingPlans.map((plan) => (
+              <PricingCard
+                key={plan.id}
+                title={plan.title}
+                price={plan.price}
+                currency={plan.currency}
+                originalPrice={plan.originalPrice}
+                features={plan.features}
+                stripeUrl={plan.stripeUrl}
+                isPopular={plan.isPopular}
+              />
+            ))}
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
   );
 };
 

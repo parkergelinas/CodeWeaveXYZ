@@ -2,7 +2,7 @@
 
 const MainSection = () => {
   // Replace with your actual Stripe checkout URL
-  const stripeCheckoutUrl = "https://buy.stripe.com/test_123";
+  const stripeCheckoutUrl = "https://buy.stripe.com/7sIdTJ2ZV4Iy5G0aEF";
 
   return (
     <div className="flex items-center justify-center p-20 bg-main-gradient min-h-screen text-center">

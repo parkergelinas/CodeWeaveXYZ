@@ -28,6 +28,18 @@ body {
   font-family: "Roboto Mono", monospace;
 }
 
+.card {
+  @apply bg-white p-6 rounded-lg shadow transition-all hover:shadow-lg;
+}
+
+.text-responsive {
+  @apply text-base md:text-lg;
+}
+
+.grid-responsive {
+  @apply grid grid-cols-1 gap-4 md:grid-cols-2;
+}
+
 /* Define animation for fade-in effect */
 @keyframes fadeIn {
   from {

@@ -1,14 +1,16 @@
+// src/routes/snippetRoutes.js
 const express = require("express");
+const { generateCodeSnippet } = require("../services/openaiService");
 const router = express.Router();
-const authController = require("../controllers/authController");
-const snippetController = require("../controllers/snippetController");
-const authMiddleware = require("../middleware/authMiddleware");
 
-// Auth Routes
-router.post("/register", authController.registerUser);
-router.post("/login", authController.loginUser);
-
-// Snippet Routes
-router.post("/", authMiddleware.verifyToken, snippetController.generateSnippet);
+router.post("/", async (req, res) => {
+  const { prompt } = req.body;
+  try {
+    const codeSnippet = await generateCodeSnippet(prompt);
+    res.json({ codeSnippet });
+  } catch (error) {
+    res.status(500).json({ error: "Failed to generate code snippet" });
+  }
+});
 
 module.exports = router;

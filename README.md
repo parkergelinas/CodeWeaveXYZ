@@ -145,13 +145,7 @@ pub struct ProductTransferred {
     pub product_id: String,
     pub new_owner: Pubkey,
 }
-
-
-
-
-
-
-
+```
 
 ## 7. Monetization and Scaling
 
@@ -189,4 +183,3 @@ For more information, please contact:
 - **Email:** support@supplychainx.sol
 - **Website:** www.supplychainx.sol
 - **Social Media:** Twitter, LinkedIn
-

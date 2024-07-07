@@ -146,7 +146,87 @@ pub struct ProductTransferred {
     pub new_owner: Pubkey,
 }
 ```
+```js
+import React, { useState } from 'react';
+import { Connection, PublicKey, clusterApiUrl } from '@solana/web3.js';
+import { Program, Provider, web3 } from '@project-serum/anchor';
+import idl from './idl.json'; // Import IDL of the deployed smart contract
 
+const network = clusterApiUrl('devnet');
+const connection = new Connection(network, 'processed');
+
+const App = () => {
+  const [productId, setProductId] = useState('');
+  const [details, setDetails] = useState('');
+  const [status, setStatus] = useState('');
+
+  const provider = new Provider(connection, window.solana, 'processed');
+  const program = new Program(idl, new PublicKey(idl.metadata.address), provider);
+
+  const registerProduct = async () => {
+    const tx = await program.rpc.registerProduct(productId, details, {
+      accounts: {
+        product: web3.Keypair.generate().publicKey,
+        user: provider.wallet.publicKey,
+        systemProgram: web3.SystemProgram.programId,
+      },
+    });
+    console.log('Product registered:', tx);
+  };
+
+  return (
+    <div>
+      <h1>Supply Chain Management</h1>
+      <input
+        type="text"
+        placeholder="Product ID"
+        value={productId}
+        onChange={(e) => setProductId(e.target.value)}
+      />
+      <input
+        type="text"
+        placeholder="Details"
+        value={details}
+        onChange={(e) => setDetails(e.target.value)}
+      />
+      <button onClick={registerProduct}>Register Product</button>
+    </div>
+  );
+};
+
+export default App;
+
+
+
+const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+
+const app = express();
+app.use(bodyParser.json());
+
+mongoose.connect('mongodb://localhost/supply_chain', { useNewUrlParser: true, useUnifiedTopology: true });
+
+const ProductSchema = new mongoose.Schema({
+  productId: String,
+  details: String,
+  status: String,
+  owner: String,
+});
+
+const Product = mongoose.model('Product', ProductSchema);
+
+app.post('/register', async (req, res) => {
+  const { productId, details, owner } = req.body;
+  const product = new Product({ productId, details, status: 'Registered', owner });
+  await product.save();
+  res.send('Product registered');
+});
+
+app.listen(3000, () => {
+  console.log('Server running on port 3000');
+});
+```
 ## 7. Monetization and Scaling
 
 ### Revenue Models:

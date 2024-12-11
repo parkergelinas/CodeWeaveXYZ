@@ -1,6 +1,6 @@
 # Whitepaper
 
-## SupplyChainX: Decentralized Supply Chain Management Protocol on Solana
+## Decentralized Supply Chain Management Protocol on Solana
 
 ## Abstract:
 In today's global economy, supply chain management faces significant challenges, including a lack of transparency, traceability, and susceptibility to fraud. SupplyChainX leverages the Solana blockchain to create a decentralized, tamper-proof system that enhances transparency, builds trust among stakeholders, and ensures the traceability of goods in real-time. This whitepaper outlines the conceptualization, technical design, development roadmap, and monetization strategies for SupplyChainX.
